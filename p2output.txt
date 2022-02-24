@@ -1,1 +1,9 @@
-
+ gcc -g p2original.c
+ ./a.out
+enter the coordinates of point 1
+ 2 4
+enter the coordinates of point 2
+3 6
+enter the coordinates of point 3
+5 5
+the given points form a triangle
