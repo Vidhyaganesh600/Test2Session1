@@ -1,1 +1,4 @@
-
+ gcc -g p4original.c
+ ./a.out
+Enter the index of the number in thr fibonacci series: 5
+The 5th element in the fibonacci series is 3  

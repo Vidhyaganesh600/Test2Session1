@@ -1,11 +1,4 @@
 #include<stdio.h>
-int main()
-{
-  int n = input();
-  int res = find_fibo(n);
-  output(n,res);
-  return 0;
-}
 int input()
 {
   int n;
@@ -16,16 +9,24 @@ int input()
 
 int find_fibo(int n)
 {
-  int a = 0,b= 1, c;
+  int a=0,b=1,fibo;
   for(int i = 1; i < n; i++)
     {
-      c=a+b;
+      fibo=a+b;
       a=b;
-      b=c;
+      b=fibo;
     }
   return a;
   }
 void output(int n, int fibo)
 {
  printf("The %dth element in the fibonacci series is %d ",n,fibo);
+}
+int main()
+{
+  int n ,fibo;
+  n=input();
+  fibo=find_fibo(n);
+  output(n,fibo);
+  return 0;
 }

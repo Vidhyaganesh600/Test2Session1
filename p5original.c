@@ -8,32 +8,31 @@ int input_array_size()
 }
 void int_array(int n, int a[n])
 {
-  for(int i=1;i<n;i++)
+  for(int i=0;i<=n;i++)
     {
-      a[i]=i+1;
+      a[i]=i;
     }
 }
 void erotosthenes_sieve(int n, int a[n])
 {
-  for(int i=1;i<=n;i++)
+  for(int i=0;i<=n;i++)
     {
-      for(int k=2;k<a[i];k++)
+      for(int k=2;k<=a[i];k++)//1 2 3 
         {
           if(a[i]%k==0)
           {
             a[i]=0;
-            break;
           }
         }
     }
 }
 void out_put(int n, int a[n])
 {
-  for(int i=1;i<n;i++)
+  for(int i=2;i<=n;i++)
     {
       if(a[i]!=0)
       {
-        printf("%d ,",a[i]);
+        printf("%d,",a[i]);
       }
     }
 }

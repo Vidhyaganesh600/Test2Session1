@@ -10,8 +10,8 @@ struct _line
 Point p1,p2;
 float distance;
 };
-typedef struct _line Line
-Point input_Point()
+typedef struct _line Line;
+Point input_point()
 {
   Point p1;
   printf("enter the point coordinates\n");
@@ -20,7 +20,7 @@ Point input_Point()
 }
 Line input_line()
 {
-  Line 1;
+  Line l;
   Point p1,p2;
   p1=input_point();
   p2=input_point();
@@ -30,5 +30,18 @@ Line input_line()
 }
 void find_length(Line *l)
 {
-  l->distance=sqrt()
+  l->distance=sqrt(pow((l->p2.x-l->p1.x),2)+pow((l->p2.y-l->p1.y),2));
+}
+void output(Line *l)
+{
+  printf("Distnce between the points (%f,%f) and (%f,%f) is %f\n",l->p1.x,l->p1.y,l->p2.x,l->p2.y,l->distance);
+}
+int main()
+{
+  Point p;
+  Line l;
+  l=input_line();
+  find_length(&l);
+  output(&l);
+  return 0;
 }

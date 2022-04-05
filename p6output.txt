@@ -1,1 +1,57 @@
+#include<stdio.h>
+#include<string.h>
+void input_strings(char *a,char *b)
+{
+  printf("Enter any string\n");
+  scanf("%s",a);
+  printf("enter the substring\n");
+  scanf("%s",b);
+}
+int str_index(char *a, char *b)
+{  
+  int i=0,j=0,n;
+while(a[i]!='\0')
+  {
+    while(b[j]!='\0')
+      {
+        if(b[j]==a[i])
+        {
+         i++;
+         j++;
+         n=i-strlen(b);
+        }
+        else
+        {
+          i++;
+        }
+      }
+  }
+ return n;
+}
+/*void index(char a[],char b[])
+{
+  int i,j;
+  while(a[i]!='\0')
+    {
+      i++;
+      while(b[j]!='\0')
+        {
+          j++;
+          b[j]=a[i];
+        }
+      i--;
+    }
+}*/
+void output( char *a,char *b,int index)
+{
 
+printf("Index of  substring %s in string %s is %d\n",b,a,index);
+}
+int main()
+{
+  char a[100], b[100];
+  input_strings(a,b);
+ int n = str_index(a,b);
+ output(a,b,n);
+return 0;
+}
